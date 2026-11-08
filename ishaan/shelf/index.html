@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>untitled · hushpad</title>
+<link rel="stylesheet" href="/assets/hushpad.css">
+</head><body>
+<header class="top"><a class="brand" href="/"><span class="dot"></span>hushpad</a><div class="who"><span class="av">I</span><span><b>Ishaan</b><small>last active 23/12/2021, 23:41</small></span></div></header><main class="book single"><section class="pane open"><article class="note show">
+<a class="back" style="display:inline-block" href="/ishaan">‹ notes</a>
+<div id="closed" class="closed"><h1>Not The Right Time, He&#x27;ll catch you</h1></div>
+<div id="open" hidden><h1>untitled</h1><div class="meta">created 25/12/2021, 19:20 · synced</div><div id="sb" class="body"></div></div>
+</article></section></main>
+<script>
+const SH={"s": "8B9UchO8u7OBe+FUjeQKtA==", "i": "Am7PcliCwrAZ4KPu", "c": "YjM8GKzm94bN+J6H94BV/RAbzW/63HTa+k1ykPQNlepOP7Ra25/F4QdMIIyFCMtL4bwN5DoXefF3muUxIteed9uUVm+71eLH0L9WMGZdU43TDs6kQri6Gig87oANuAZQ+xnbFipgOa6owRy3gohREcJzfz9NkG88kXTNsiSEnm6d+znI2cM60+WgPqpF0wdndy5gLNRjAb0ITkzSfWx9ZRl7t66qhE9pJk11QNV8CE5GkNgULZyKjVBE+uunEHDg9zjXfKGPQEAlhp46+U5CBz5V7uEZZzqGnp6Vmo/UMljjCwszdL01G6p/40yDt6JmPpxUTE6MRrAhup/9IUWRiqSuihnKbl+St3O5doSiEZ7EZ91CRLF17X61fY1GsF86mysrox63RL6vQ4QjvtN9nbRqzOSBxrN39jdCD54WTaSHXayEwCLeoNAdbBDkIkkQR+Y0mei7iLY+wtYsNJgxzgnytgfrzPOwsUxc11kt2DvEsvT00ibW+AuTHUROpK8mhS3lYzsV4WF6BhGSzY4Z0hbHvohzljcQJr2oy6M2yatSCCwl+2mXgbnEe07GTMtqPo0O1D47cwMCMVGnzwLj5YDYbo7cfONym8b+pnIQcGBbxFl1QQiUwhkH7ARrUZp3hydjDFVxerTe4wdQkUEklAZgmFWTJPwFHyqrUvGsWR+lPymTVMY24j/mgn5y3xG3jFU6N+cw8JaFJUiucfU4v6bZcrEWJj/fhL8Y1+dAEuKRs31loAkSJ5N1Ysi0LApbMsMOJnwIU1yGUr3lwoNT3Hk9onjfD4+6d3ReKN+RwZCQh5ZA+kfJJOB5l4sEKCL7gq4DMEsf/uvw8L8gApxVDj3uxe2B4xL6diTl1UKJYe0qDrh7Cs9k6P9zD7biP7ikxMxRqolP784HYWtPqol/v0586V3dOC7HdQKKjnslUZy23AIpIh9y320aBOaNGSkGU9DXzCz/lWW2/6I/DcNEu+tnPEfy0UVtYxFUPUVYE0mNaoo0tzarLMpz/zKYWyra/1A2Fni0Ax8Xt2FvY/81UprzR63eIPwOTtuO3XpO1OUiARHqOtzhgw37BJA2DJGfl7E+0HQ5Rhw0GRK8QpmyxkXJbHX76NX9W/3M9MetKAwCrXS/EL+pBXlCm0RaCR1o/rHdzE3H3F7pR28M8i1PfhtPH3vTkZYGL4NwySbvmdJc/4XsQ1wXm4/bHlsetW+1uiy7bzBK7Iy6I9NMrf7f+G3qtdY="},GK="wkekCmTw5bPeE";
+function b64(s){return Uint8Array.from(atob(s),c=>c.charCodeAt(0))}
+async function dec(pw,L){const k=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveKey']);
+const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(L.s),iterations:200000,hash:'SHA-256'},k,{name:'AES-GCM',length:256},false,['decrypt']);
+return new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(L.i)},key,b64(L.c)));}
+async function gate(){const d=new Date(),m=d.getHours()*60+d.getMinutes(),o=m>=19*60&&m<21*60;
+document.getElementById('closed').hidden=o;const op=document.getElementById('open');
+if(o&&op.hidden){if(!document.getElementById('sb').innerHTML)document.getElementById('sb').innerHTML=await dec(GK,SH);op.hidden=false;}if(!o)op.hidden=true;}
+gate();setInterval(gate,30000);
+</script>
+<script>
+window.hpBanner=function(){if(document.getElementById('hpb'))return;const b=document.createElement('div');b.id='hpb';b.className='hpb';
+b.innerHTML='<b>This account is read-only.</b> It has been preserved in response to a legal request. <a href="/transparency">Learn more</a>';
+const t=document.querySelector('.top');if(t)t.after(b);else document.body.prepend(b);};
+try{if(localStorage.getItem('hp_preserved'))window.hpBanner();}catch(_){}
+</script>
+</body></html>

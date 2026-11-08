@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>privacy · hushpad</title>
+<link rel="stylesheet" href="/assets/hushpad.css">
+</head><body>
+<header class="top"><a class="brand" href="/"><span class="dot"></span>hushpad</a></header><main class="hero doc"><h1>privacy</h1>
+<p>hushpad stores your notes so they sync across your devices. scrambled and locked notes are encrypted on your device before they are uploaded.</p>
+<p>we don't sell your data or show you ads. we only share account data when the law requires us to.</p>
+<p>questions? write to us from the app's settings page.</p></main>
+<script>
+window.hpBanner=function(){if(document.getElementById('hpb'))return;const b=document.createElement('div');b.id='hpb';b.className='hpb';
+b.innerHTML='<b>This account is read-only.</b> It has been preserved in response to a legal request. <a href="/transparency">Learn more</a>';
+const t=document.querySelector('.top');if(t)t.after(b);else document.body.prepend(b);};
+try{if(localStorage.getItem('hp_preserved'))window.hpBanner();}catch(_){}
+</script>
+</body></html>

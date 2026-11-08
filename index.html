@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hushpad</title>
+<link rel="stylesheet" href="/assets/hushpad.css">
+</head><body>
+<header class="top"><a class="brand" href="/"><span class="dot"></span>hushpad</a><button class="si" onclick="document.getElementById('m').textContent='sign-ins are temporarily unavailable.'">sign in</button></header><main class="hero"><h1>notes that stay quiet.</h1><p>private notes, synced across your devices. scramble anything you don't want seen.</p><p id="m" class="err" role="status"></p>
+<section class="patch"><h2>patch notes</h2>
+<div class="pv"><b>v2.1</b> <span>18/12/2021</span><ul>
+<li>scramble: you can now scramble a note with a key of your choice.</li>
+<li>recently deleted has been temporarily removed from the sidebar while we fix a sync issue. deleted notes are still safe. to view them, add <code>/trash</code> to the end of your notebook's address.</li>
+<li>audio attachments now show a frequency preview, so you can see what you can't hear.</li>
+<li>fixed timestamps showing the wrong time for notes edited after midnight.</li></ul></div>
+<div class="pv"><b>v2.0</b> <span>02/11/2021</span><ul>
+<li>new look, same quiet.</li>
+<li>locked notes now use stronger encryption. we can't recover a forgotten password, so please don't forget yours.</li></ul></div>
+</section></main><footer class="foot">hushpad 2.1 · © 2019–2021 hushpad labs · <a href="/privacy">privacy</a></footer>
+<script>
+window.hpBanner=function(){if(document.getElementById('hpb'))return;const b=document.createElement('div');b.id='hpb';b.className='hpb';
+b.innerHTML='<b>This account is read-only.</b> It has been preserved in response to a legal request. <a href="/transparency">Learn more</a>';
+const t=document.querySelector('.top');if(t)t.after(b);else document.body.prepend(b);};
+try{if(localStorage.getItem('hp_preserved'))window.hpBanner();}catch(_){}
+</script>
+</body></html>
