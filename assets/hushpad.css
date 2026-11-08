@@ -104,3 +104,5 @@ a{color:inherit}
 .pill[hidden]{display:none}.pill:hover{background:#3d4a3f}
 @media (max-width:720px){.synccard{flex-wrap:wrap}.sgo{margin-left:24px}}
 #post{padding-bottom:70px}
+.share{max-width:620px}.sh-from{display:flex;align-items:center;gap:10px;font-size:14px;color:#6a6456}.av.sm{width:26px;height:26px;font-size:13px}
+.share .ph img{border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.12)}.share .lock{max-width:none;margin-top:8px}

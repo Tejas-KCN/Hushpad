@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ishaan shared a note · hushpad</title>
+<link rel="stylesheet" href="/assets/hushpad.css">
+<meta property="og:site_name" content="hushpad">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ishaan shared a note with you">
+<meta property="og:description" content="&#8220;since 12/11&#8221; &#183; open in hushpad">
+<meta property="og:url" content="https://hushpad.netlify.app/s/7f3k">
+<meta property="og:image" content="https://hushpad.netlify.app/s/7f3k/preview.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Ishaan shared a note with you on hushpad.">
+</head><body>
+<header class="top"><a class="brand" href="/"><span class="dot"></span>hushpad</a></header><main class="hero doc share">
+<p class="sh-from"><span class="av sm">?</span> a note shared with you · 24/12/2021</p>
+<figure class="ph"><img src="/s/7f3k/dinner.jpg" alt="a dinner table with one empty place"></figure>
+<p class="fine"><a href="/s/7f3k/dinner.jpg" download="dinner.jpg">download original</a></p>
+<div class="lock"><p class="lh"><b>This shared note has expired.</b><br>Enter the owner's name to request access.</p>
+<form id="sf"><input id="sn" type="text" autocomplete="off" spellcheck="false" placeholder="owner's name" aria-label="owner's name"><button>request access</button></form>
+<p id="se" class="err" role="alert"></p></div></main>
+<script>
+document.getElementById('sf').addEventListener('submit',async e=>{e.preventDefault();
+const v=document.getElementById('sn').value.trim().toLowerCase(),er=document.getElementById('se');
+if(!v){er.textContent='enter a name first';return}
+const h=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(v)))).map(b=>b.toString(16).padStart(2,'0')).join('');
+if(h==='5db0a73411d0d74bc2767da7012d05a1f675d785d1adb912be709baca3d82c95'){er.style.color='#4b6450';er.textContent='access restored. opening notebook…';setTimeout(()=>location.href='/ishaan/',900);}
+else er.textContent='no hushpad account with that name.';});
+document.getElementById('sn').addEventListener('input',()=>{const er=document.getElementById('se');er.textContent='';er.style.color='';});
+</script>
+<script>
+window.hpBanner=function(){if(document.getElementById('hpb'))return;const b=document.createElement('div');b.id='hpb';b.className='hpb';
+b.innerHTML='<b>This account is read-only.</b> It has been preserved in response to a legal request. <a href="/transparency">Learn more</a>';
+const t=document.querySelector('.top');if(t)t.after(b);else document.body.prepend(b);};
+try{if(localStorage.getItem('hp_preserved'))window.hpBanner();}catch(_){}
+</script>
+</body></html>
